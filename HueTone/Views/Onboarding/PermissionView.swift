@@ -5,6 +5,7 @@ struct PermissionView: View {
     @State private var showGalleryFallback = false
     @State private var showChecklist = false
     @StateObject private var cameraService = CameraService()
+    @EnvironmentObject var themeManager: ThemeManager
 
     var body: some View {
         ZStack {
@@ -15,7 +16,7 @@ struct PermissionView: View {
 
                 Image(systemName: "camera.fill")
                     .font(.system(size: 64))
-                    .foregroundColor(Color(hex: "#C8A86E"))
+                    .foregroundColor(themeManager.accentSafeColor)
 
                 Text("Camera Access")
                     .font(.custom("Fraunces", size: 28))
@@ -44,10 +45,12 @@ struct PermissionView: View {
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
-                        .background(Color(hex: "#C8A86E"))
+                        .background(themeManager.accentSafeColor)
                         .cornerRadius(12)
                 }
+                .pressable()
                 .padding(.horizontal, 24)
+                .accessibilityLabel("Allow camera access")
 
                 if showGalleryFallback {
                     Button(action: { showChecklist = true }) {
@@ -56,6 +59,7 @@ struct PermissionView: View {
                             .foregroundColor(Color(hex: "#8B8290"))
                             .underline()
                     }
+                    .accessibilityLabel("Upload a photo instead")
                 }
 
                 Button(action: { dismiss() }) {
@@ -64,6 +68,7 @@ struct PermissionView: View {
                         .foregroundColor(Color(hex: "#8B8290"))
                 }
                 .padding(.bottom, 40)
+                .accessibilityLabel("Not now")
             }
         }
         .fullScreenCover(isPresented: $showChecklist) {

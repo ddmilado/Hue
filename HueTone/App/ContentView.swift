@@ -3,16 +3,25 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var navigationState: NavigationState
     @EnvironmentObject var themeManager: ThemeManager
+    @State private var animateIn = false
 
     var body: some View {
         Group {
             if navigationState.hasCompletedOnboarding {
                 MainTabView()
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .trailing).combined(with: .opacity),
+                        removal: .move(edge: .leading).combined(with: .opacity)
+                    ))
             } else {
                 WelcomeView()
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .trailing).combined(with: .opacity),
+                        removal: .move(edge: .leading).combined(with: .opacity)
+                    ))
             }
         }
-        .animation(.easeInOut(duration: 0.5), value: navigationState.hasCompletedOnboarding)
+        .animation(.spring(response: 0.6, dampingFraction: 0.85), value: navigationState.hasCompletedOnboarding)
     }
 }
 
@@ -41,6 +50,6 @@ struct MainTabView: View {
                     Label("Profile", systemImage: "person.circle")
                 }
         }
-        .tint(Color(hex: themeManager.signatureAccentSafe))
+        .tint(themeManager.accentSafeColor)
     }
 }

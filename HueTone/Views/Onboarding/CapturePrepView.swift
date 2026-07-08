@@ -3,6 +3,7 @@ import SwiftUI
 struct CapturePrepView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showCalibration = false
+    @EnvironmentObject var themeManager: ThemeManager
 
     let items = [
         ("No makeup", "face.smiling"),
@@ -27,7 +28,7 @@ struct CapturePrepView: View {
                         HStack(spacing: 16) {
                             Image(systemName: item.1)
                                 .font(.title3)
-                                .foregroundColor(Color(hex: "#C8A86E"))
+                                .foregroundColor(themeManager.accentSafeColor)
                                 .frame(width: 32)
 
                             Text(item.0)
@@ -48,12 +49,21 @@ struct CapturePrepView: View {
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
-                        .background(Color(hex: "#C8A86E"))
+                        .background(themeManager.accentSafeColor)
                         .cornerRadius(12)
                 }
+                .pressable()
                 .padding(.horizontal, 24)
                 .padding(.bottom, 40)
             }
+        }
+        .overlay(alignment: .topLeading) {
+            Button(action: { dismiss() }) {
+                Image(systemName: "chevron.left")
+                    .foregroundColor(Color(hex: "#F7F2EC"))
+                    .padding()
+            }
+            .accessibilityLabel("Go back")
         }
         .fullScreenCover(isPresented: $showCalibration) {
             CalibrationInstructionsView()

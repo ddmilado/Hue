@@ -3,6 +3,7 @@ import SwiftUI
 struct HowItWorksView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showPermissions = false
+    @EnvironmentObject var themeManager: ThemeManager
 
     var body: some View {
         ZStack {
@@ -17,11 +18,11 @@ struct HowItWorksView: View {
 
                 VStack(alignment: .leading, spacing: 32) {
                     StepView(number: 1, title: "Snap a bare-faced photo in natural light.",
-                             icon: "camera.aperture")
+                             icon: "camera.aperture", themeManager: themeManager)
                     StepView(number: 2, title: "We read your depth, undertone, and contrast.",
-                             icon: "eyedropper.halffull")
+                             icon: "eyedropper.halffull", themeManager: themeManager)
                     StepView(number: 3, title: "Get your season and a palette built for you.",
-                             icon: "palette")
+                             icon: "palette", themeManager: themeManager)
                 }
                 .padding(.horizontal, 32)
 
@@ -34,9 +35,10 @@ struct HowItWorksView: View {
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
-                        .background(Color(hex: "#C8A86E"))
+                        .background(themeManager.accentSafeColor)
                         .cornerRadius(12)
                 }
+                .pressable()
                 .padding(.horizontal, 24)
                 .padding(.bottom, 40)
             }
@@ -60,12 +62,13 @@ struct StepView: View {
     let number: Int
     let title: String
     let icon: String
+    let themeManager: ThemeManager
 
     var body: some View {
         HStack(spacing: 16) {
             Image(systemName: icon)
                 .font(.title2)
-                .foregroundColor(Color(hex: "#C8A86E"))
+                .foregroundColor(themeManager.accentSafeColor)
                 .frame(width: 40)
 
             Text(title)

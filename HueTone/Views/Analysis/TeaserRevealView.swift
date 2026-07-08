@@ -3,6 +3,7 @@ import SwiftUI
 struct TeaserRevealView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showAccount = false
+    @EnvironmentObject var themeManager: ThemeManager
 
     var body: some View {
         ZStack {
@@ -17,6 +18,7 @@ struct TeaserRevealView: View {
                     .font(.custom("Fraunces", size: 28))
                     .foregroundColor(Color(hex: "#F7F2EC"))
                     .padding(.top, 20)
+                    .accessibilityLabel("Your results are ready")
 
                 Text("Your season: — — — —")
                     .font(.custom("Fraunces", size: 20))
@@ -37,10 +39,12 @@ struct TeaserRevealView: View {
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
-                            .background(Color(hex: "#C8A86E"))
+                            .background(themeManager.accentSafeColor)
                             .cornerRadius(12)
                     }
+                    .pressable()
                     .padding(.horizontal, 24)
+                    .accessibilityLabel("See your results")
                 }
 
                 Button(action: { dismiss() }) {
@@ -49,6 +53,7 @@ struct TeaserRevealView: View {
                         .foregroundColor(Color(hex: "#8B8290"))
                 }
                 .padding(.bottom, 40)
+                .accessibilityLabel("Not now")
             }
         }
         .fullScreenCover(isPresented: $showAccount) {

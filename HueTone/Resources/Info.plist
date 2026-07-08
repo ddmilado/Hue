@@ -29,8 +29,24 @@
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Inter-Regular.ttf</string>
+		<string>Inter-SemiBold.ttf</string>
+		<string>Fraunces-Variable.ttf</string>
+	</array>
 	<key>UILaunchScreen</key>
 	<dict/>
+	<key>SUPABASE_URL</key>
+	<string>https://your-project.supabase.co</string>
+	<key>SUPABASE_ANON_KEY</key>
+	<string>your-anon-key-here</string>
+	<key>AMPLITUDE_API_KEY</key>
+	<string></string>
+	<key>SENTRY_DSN</key>
+	<string></string>
+	<key>APP_STORE_SHARED_SECRET</key>
+	<string></string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

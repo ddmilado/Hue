@@ -11,7 +11,6 @@ struct KaleidoscopeView: View {
     var body: some View {
         TimelineView(.animation(minimumInterval: 0.02)) { _ in
             Canvas { context, size in
-                let rect = CGRect(origin: .zero, size: size)
                 let center = CGPoint(x: size.width / 2, y: size.height / 2)
                 let count = 12
 

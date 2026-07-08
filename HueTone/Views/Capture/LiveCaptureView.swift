@@ -7,6 +7,7 @@ struct LiveCaptureView: View {
     @State private var faceCentered = false
     @State private var lightingLevel: Double = 0.7
     @State private var hasCaptured = false
+    @EnvironmentObject var themeManager: ThemeManager
 
     private var canCapture: Bool {
         paperDetected && faceCentered && lightingLevel > 0.5 && !hasCaptured
@@ -23,7 +24,7 @@ struct LiveCaptureView: View {
                         .aspectRatio(3/4, contentMode: .fit)
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color(hex: "#C8A86E").opacity(faceCentered ? 1 : 0.3), lineWidth: 2)
+                                .stroke(themeManager.accentSafeColor.opacity(faceCentered ? 1 : 0.3), lineWidth: 2)
                         )
 
                     VStack(spacing: 12) {
@@ -75,7 +76,7 @@ struct LiveCaptureView: View {
                     }
                 }) {
                     Circle()
-                        .fill(Color(hex: canCapture ? "#C8A86E" : "#8B8290"))
+                        .fill(canCapture ? themeManager.accentSafeColor : Color(hex: "#8B8290"))
                         .frame(width: 72, height: 72)
                         .overlay(
                             Circle()
@@ -85,7 +86,17 @@ struct LiveCaptureView: View {
                 }
                 .disabled(!canCapture)
                 .padding(.bottom, 40)
+                .accessibilityLabel(canCapture ? "Capture photo" : "Cannot capture yet")
+                .accessibilityHint("Ensure paper is detected, face is centered, and lighting is good")
             }
+        }
+        .overlay(alignment: .topLeading) {
+            Button(action: { dismiss() }) {
+                Image(systemName: "xmark")
+                    .foregroundColor(Color(hex: "#F7F2EC"))
+                    .padding()
+            }
+            .accessibilityLabel("Close camera")
         }
         .fullScreenCover(isPresented: $showReview) {
             ReviewRetakeView()

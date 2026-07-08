@@ -1,0 +1,9 @@
+// HueTone Configuration
+// Copy this to Config.local.xcconfig (gitignored) and fill in real values.
+// Add Config.local.xcconfig as a configuration-level import in Xcode.
+
+SUPABASE_URL = https://your-project.supabase.co
+SUPABASE_ANON_KEY = your-anon-key-here
+AMPLITUDE_API_KEY =
+SENTRY_DSN =
+APP_STORE_SHARED_SECRET =

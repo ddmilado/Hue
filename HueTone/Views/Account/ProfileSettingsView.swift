@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ProfileSettingsView: View {
     @EnvironmentObject var themeManager: ThemeManager
+    @State private var showCapture = false
 
     var body: some View {
         ZStack {
@@ -12,26 +13,34 @@ struct ProfileSettingsView: View {
                     .font(.custom("Fraunces", size: 28))
                     .foregroundColor(Color(hex: "#F7F2EC"))
                     .padding(.top, 8)
+                    .accessibilityLabel("Profile")
 
                 VStack(spacing: 0) {
-                    ProfileRow(icon: "person.circle", title: "Account", subtitle: "email@example.com")
+                    ProfileRow(icon: "person.circle", title: "Account", subtitle: "email@example.com",
+                              themeManager: themeManager)
                     Divider().background(Color(hex: "#2A2729"))
-                    ProfileRow(icon: "crown", title: "Subscription", subtitle: "Free tier")
+                    ProfileRow(icon: "crown", title: "Subscription", subtitle: "Free tier",
+                              themeManager: themeManager)
                     Divider().background(Color(hex: "#2A2729"))
-                    ProfileRow(icon: "camera.aperture", title: "Retake Analysis", subtitle: nil)
+                    ProfileRow(icon: "camera.aperture", title: "Retake Analysis", subtitle: nil,
+                              themeManager: themeManager)
                     Divider().background(Color(hex: "#2A2729"))
-                    ProfileRow(icon: "bell", title: "Notifications", subtitle: nil)
+                    ProfileRow(icon: "bell", title: "Notifications", subtitle: nil,
+                              themeManager: themeManager)
                 }
                 .background(Color(hex: "#2A2729").opacity(0.3))
                 .cornerRadius(16)
                 .padding(.horizontal, 24)
 
                 VStack(spacing: 0) {
-                    ProfileRow(icon: "lock.shield", title: "Privacy Policy", subtitle: nil)
+                    ProfileRow(icon: "lock.shield", title: "Privacy Policy", subtitle: nil,
+                              themeManager: themeManager)
                     Divider().background(Color(hex: "#2A2729"))
-                    ProfileRow(icon: "doc.text", title: "Terms of Service", subtitle: nil)
+                    ProfileRow(icon: "doc.text", title: "Terms of Service", subtitle: nil,
+                              themeManager: themeManager)
                     Divider().background(Color(hex: "#2A2729"))
-                    ProfileRow(icon: "info.circle", title: "Affiliate Disclosure", subtitle: nil)
+                    ProfileRow(icon: "info.circle", title: "Affiliate Disclosure", subtitle: nil,
+                              themeManager: themeManager)
                 }
                 .background(Color(hex: "#2A2729").opacity(0.3))
                 .cornerRadius(16)
@@ -45,7 +54,11 @@ struct ProfileSettingsView: View {
                         .foregroundColor(.red.opacity(0.8))
                 }
                 .padding(.bottom, 40)
+                .accessibilityLabel("Sign out")
             }
+        }
+        .fullScreenCover(isPresented: $showCapture) {
+            CapturePrepView()
         }
     }
 }
@@ -54,11 +67,12 @@ struct ProfileRow: View {
     let icon: String
     let title: String
     let subtitle: String?
+    let themeManager: ThemeManager
 
     var body: some View {
         HStack(spacing: 12) {
             Image(systemName: icon)
-                .foregroundColor(Color(hex: "#C8A86E"))
+                .foregroundColor(themeManager.accentSafeColor)
                 .frame(width: 24)
 
             VStack(alignment: .leading, spacing: 2) {

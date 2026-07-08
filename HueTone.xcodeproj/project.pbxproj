@@ -19,6 +19,12 @@
 		B0010011 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010011 /* AppTheme.swift */; };
 		B0010012 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010012 /* ThemeManager.swift */; };
 		B0010013 /* DynamicAccent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010013 /* DynamicAccent.swift */; };
+		B0010056 /* AnimatedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010104 /* AnimatedButtonStyle.swift */; };
+		B0010057 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010105 /* Config.swift */; };
+		B0010058 /* ProductIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010106 /* ProductIdentifiers.swift */; };
+		B0010059 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010107 /* AuthService.swift */; };
+		B0010060 /* SupabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010108 /* SupabaseService.swift */; };
+		B0010061 /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010109 /* SyncService.swift */; };
 		B0010014 /* ColorScience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010014 /* ColorScience.swift */; };
 		B0010015 /* CalibrationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010015 /* CalibrationEngine.swift */; };
 		B0010016 /* FaceLandmarkDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010016 /* FaceLandmarkDetection.swift */; };
@@ -59,6 +65,9 @@
 		B0010052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0010052 /* Assets.xcassets */; };
 		B0020001 /* HueToneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0020001 /* HueToneTests.swift */; };
 		B0030001 /* HueToneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0030001 /* HueToneUITests.swift */; };
+		B0010053 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0010101 /* Inter-Regular.ttf */; };
+		B0010054 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0010102 /* Inter-SemiBold.ttf */; };
+		B0010055 /* Fraunces-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0010103 /* Fraunces-Variable.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +101,12 @@
 		F0010011 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		F0010012 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		F0010013 /* DynamicAccent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicAccent.swift; sourceTree = "<group>"; };
+		F0010104 /* AnimatedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedButtonStyle.swift; sourceTree = "<group>"; };
+		F0010105 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F0010106 /* ProductIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductIdentifiers.swift; sourceTree = "<group>"; };
+		F0010107 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		F0010108 /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
+		F0010109 /* SyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncService.swift; sourceTree = "<group>"; };
 		F0010014 /* ColorScience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScience.swift; sourceTree = "<group>"; };
 		F0010015 /* CalibrationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationEngine.swift; sourceTree = "<group>"; };
 		F0010016 /* FaceLandmarkDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmarkDetection.swift; sourceTree = "<group>"; };
@@ -138,6 +153,9 @@
 		F0030001 /* HueToneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueToneUITests.swift; sourceTree = "<group>"; };
 		F0030002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0030100 /* HueToneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HueToneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0010101 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		F0010102 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		F0010103 /* Fraunces-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fraunces-Variable.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +190,7 @@
 			);
 			sourceTree = "<group>";
 		};
-		G0010002 /* HueTone */ = {
+			G0010002 /* HueTone */ = {
 			isa = PBXGroup;
 			children = (
 				G0010006 /* App */,
@@ -182,6 +200,8 @@
 				G0010010 /* Services */,
 				G0010011 /* Views */,
 				G0010012 /* Resources */,
+				G0010100 /* Configuration */,
+				G0010101 /* Constants */,
 			);
 			path = HueTone;
 			sourceTree = "<group>";
@@ -244,6 +264,7 @@
 				F0010011 /* AppTheme.swift */,
 				F0010012 /* ThemeManager.swift */,
 				F0010013 /* DynamicAccent.swift */,
+				F0010104 /* AnimatedButtonStyle.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -267,6 +288,9 @@
 				F0010021 /* CameraService.swift */,
 				F0010022 /* AffiliateService.swift */,
 				F0010023 /* StorageService.swift */,
+				F0010107 /* AuthService.swift */,
+				F0010108 /* SupabaseService.swift */,
+				F0010109 /* SyncService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -289,8 +313,19 @@
 			children = (
 				F0010051 /* Info.plist */,
 				F0010052 /* Assets.xcassets */,
+				G0010020 /* Fonts */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		G0010020 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F0010101 /* Inter-Regular.ttf */,
+				F0010102 /* Inter-SemiBold.ttf */,
+				F0010103 /* Fraunces-Variable.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		G0010013 /* Classifier */ = {
@@ -369,6 +404,22 @@
 				F0010050 /* ProfileSettingsView.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		G0010100 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				F0010105 /* Config.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		G0010101 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F0010106 /* ProductIdentifiers.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +512,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0010052 /* Assets.xcassets in Resources */,
+				B0010053 /* Inter-Regular.ttf in Resources */,
+				B0010054 /* Inter-SemiBold.ttf in Resources */,
+				B0010055 /* Fraunces-Variable.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +587,12 @@
 				B0010048 /* HistoryView.swift in Sources */,
 				B0010049 /* UpgradePremiumView.swift in Sources */,
 				B0010050 /* ProfileSettingsView.swift in Sources */,
+				B0010056 /* AnimatedButtonStyle.swift in Sources */,
+				B0010057 /* Config.swift in Sources */,
+				B0010058 /* ProductIdentifiers.swift in Sources */,
+				B0010059 /* AuthService.swift in Sources */,
+				B0010060 /* SupabaseService.swift in Sources */,
+				B0010061 /* SyncService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

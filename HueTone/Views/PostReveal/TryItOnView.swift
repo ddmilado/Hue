@@ -19,6 +19,7 @@ struct TryItOnView: View {
                     .font(.custom("Fraunces", size: 28))
                     .foregroundColor(Color(hex: "#F7F2EC"))
                     .padding(.top, 8)
+                    .accessibilityLabel("Try it on")
 
                 if generationsRemaining <= 0 && navigationState.latestResult == nil {
                     VStack(spacing: 16) {
@@ -46,10 +47,13 @@ struct TryItOnView: View {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 8) {
                             ForEach(garments, id: \.self) { garment in
-                                CategoryPill(category: SwatchCategory(rawValue: garment.lowercased()) ?? .neutral,
-                                           isSelected: selectedGarment == garment)
-                                    .overlay(Text(garment).padding(.horizontal, 8))
-                                    .onTapGesture { selectedGarment = garment }
+                                CategoryPill(
+                                    category: SwatchCategory(rawValue: garment.lowercased()) ?? .neutral,
+                                    isSelected: selectedGarment == garment,
+                                    themeManager: themeManager
+                                )
+                                .overlay(Text(garment).padding(.horizontal, 8))
+                                .onTapGesture { selectedGarment = garment }
                             }
                         }
                         .padding(.horizontal, 24)
@@ -84,6 +88,7 @@ struct TryItOnView: View {
                             .cornerRadius(12)
                     }
                     .padding(.horizontal, 24)
+                    .accessibilityLabel("Generate outfits")
                 }
             }
 

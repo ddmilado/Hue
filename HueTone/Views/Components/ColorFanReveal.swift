@@ -4,9 +4,11 @@ struct ColorFanReveal: View {
     let swatches: [PaletteSwatch]
     var isBlurred: Bool = false
     var onRevealComplete: (() -> Void)?
+    var animateImmediately: Bool = true
 
     @State private var fanSpread: Double = 0
     @State private var visible: Double = 0
+    @State private var sliceAlphas: [Double] = Array(repeating: 0, count: 12)
 
     private static let fanCount = 12
 
@@ -29,20 +31,32 @@ struct ColorFanReveal: View {
                     let rad = angle * .pi / 180
                     FanSlice(center: center, angle: rad, height: sliceHeight)
                         .fill(fanColor(i: i))
+                        .opacity(sliceAlphas[i])
                     FanSlice(center: center, angle: rad, height: sliceHeight)
                         .stroke(Color.white.opacity(0.2), lineWidth: 0.5)
+                        .opacity(sliceAlphas[i])
                 }
             }
         }
         .opacity(visible)
         .onAppear {
-            withAnimation(.spring(response: 0.8, dampingFraction: 0.7)) {
-                fanSpread = 1
-                visible = 1
+            guard animateImmediately else { return }
+            startAnimation()
+        }
+    }
+
+    func startAnimation() {
+        withAnimation(.spring(response: 0.8, dampingFraction: 0.7)) {
+            fanSpread = 1
+            visible = 1
+        }
+        for i in 0..<Self.fanCount {
+            withAnimation(.easeOut(duration: 0.4).delay(Double(i) * 0.05)) {
+                sliceAlphas[i] = 1
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                onRevealComplete?()
-            }
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+            onRevealComplete?()
         }
     }
 

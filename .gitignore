@@ -25,3 +25,13 @@ DerivedData/
 ## IDE
 .idea/
 
+## Configuration secrets
+Config.local.xcconfig
+!Config.xcconfig
+.supabase_anon_key
+
+## Supabase local dev
+supabase/.branches
+supabase/.temp
+supabase/import.curl
+

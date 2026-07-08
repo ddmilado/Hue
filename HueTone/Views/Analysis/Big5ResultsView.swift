@@ -20,6 +20,7 @@ struct Big5ResultsView: View {
                 Text("Your Big 5")
                     .font(.custom("Fraunces", size: 32))
                     .foregroundColor(Color(hex: "#F7F2EC"))
+                    .accessibilityLabel("Your Big 5 dimensions")
 
                 Text("The dimensions that define your season")
                     .font(.custom("Inter", size: 14))
@@ -27,15 +28,20 @@ struct Big5ResultsView: View {
 
                 VStack(spacing: 16) {
                     Big5Row(label: "Depth", value: depth, leftLabel: "Light", rightLabel: "Deep",
-                           description: "How light or dark your overall coloring is")
+                           description: "How light or dark your overall coloring is",
+                           themeManager: themeManager)
                     Big5Row(label: "Value", value: value, leftLabel: "Light", rightLabel: "Dark",
-                           description: "The lightness of your skin, hair, and eyes combined")
+                           description: "The lightness of your skin, hair, and eyes combined",
+                           themeManager: themeManager)
                     Big5Row(label: "Chroma", value: chroma, leftLabel: "Soft", rightLabel: "Bright",
-                           description: "How clear or muted your natural colors are")
+                           description: "How clear or muted your natural colors are",
+                           themeManager: themeManager)
                     Big5Row(label: "Undertone", value: undertone, leftLabel: "Cool", rightLabel: "Warm",
-                           description: "The underlying hue temperature of your skin")
+                           description: "The underlying hue temperature of your skin",
+                           themeManager: themeManager)
                     Big5Row(label: "Contrast", value: contrast, leftLabel: "Low", rightLabel: "High",
-                           description: "The difference between your skin, hair, and eye values")
+                           description: "The difference between your skin, hair, and eye values",
+                           themeManager: themeManager)
                 }
                 .padding(.horizontal, 24)
 
@@ -51,8 +57,10 @@ struct Big5ResultsView: View {
                         .background(themeManager.accentSafeColor)
                         .cornerRadius(12)
                 }
+                .pressable()
                 .padding(.horizontal, 24)
                 .padding(.bottom, 40)
+                .accessibilityLabel("See my season")
             }
         }
         .fullScreenCover(isPresented: $showReveal) {
@@ -67,6 +75,7 @@ struct Big5Row: View {
     let leftLabel: String
     let rightLabel: String
     let description: String
+    let themeManager: ThemeManager
 
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
@@ -85,7 +94,7 @@ struct Big5Row: View {
                         .frame(height: 6)
 
                     Capsule()
-                        .fill(Color(hex: "#C8A86E"))
+                        .fill(themeManager.accentSafeColor)
                         .frame(width: geo.size.width * value, height: 6)
                 }
             }

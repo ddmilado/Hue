@@ -2,6 +2,8 @@ import SwiftUI
 
 struct HistoryView: View {
     @EnvironmentObject var themeManager: ThemeManager
+    @EnvironmentObject var navigationState: NavigationState
+    @State private var showCapture = false
 
     var body: some View {
         ZStack {
@@ -12,8 +14,9 @@ struct HistoryView: View {
                     .font(.custom("Fraunces", size: 28))
                     .foregroundColor(Color(hex: "#F7F2EC"))
                     .padding(.top, 8)
+                    .accessibilityLabel("Analysis history")
 
-                Button(action: {}) {
+                Button(action: { showCapture = true }) {
                     Text("Retake Analysis")
                         .font(.custom("Inter", size: 15))
                         .foregroundColor(.white)
@@ -22,23 +25,45 @@ struct HistoryView: View {
                         .background(themeManager.accentSafeColor)
                         .cornerRadius(12)
                 }
+                .pressable()
                 .padding(.horizontal, 24)
+                .accessibilityLabel("Retake analysis")
 
-                if true {
+                if let result = navigationState.latestResult {
                     VStack(spacing: 0) {
-                        HistoryRow(season: .deepAutumn, date: "Mar 15, 2026", confidence: 92)
-                        Divider().background(Color(hex: "#2A2729"))
-                        HistoryRow(season: .trueAutumn, date: "Jan 8, 2026", confidence: 78)
-                        Divider().background(Color(hex: "#2A2729"))
-                        HistoryRow(season: .softAutumn, date: "Oct 22, 2025", confidence: 65)
+                        HistoryRow(
+                            season: result.season,
+                            date: "Today",
+                            confidence: result.confidence,
+                            themeManager: themeManager
+                        )
                     }
                     .background(Color(hex: "#2A2729").opacity(0.3))
                     .cornerRadius(16)
                     .padding(.horizontal, 24)
+                } else {
+                    VStack(spacing: 12) {
+                        Spacer()
+                        Image(systemName: "clock.arrow.circlepath")
+                            .font(.system(size: 48))
+                            .foregroundColor(Color(hex: "#8B8290"))
+                        Text("No analyses yet")
+                            .font(.custom("Inter", size: 16))
+                            .foregroundColor(Color(hex: "#8B8290"))
+                        Text("Complete your first color analysis\nto see it here.")
+                            .font(.custom("Inter", size: 14))
+                            .foregroundColor(Color(hex: "#8B8290").opacity(0.7))
+                            .multilineTextAlignment(.center)
+                        Spacer()
+                    }
+                    .padding(.horizontal, 32)
                 }
 
                 Spacer()
             }
+        }
+        .fullScreenCover(isPresented: $showCapture) {
+            CapturePrepView()
         }
     }
 }
@@ -47,11 +72,12 @@ struct HistoryRow: View {
     let season: Season
     let date: String
     let confidence: Double
+    let themeManager: ThemeManager
 
     var body: some View {
         HStack {
             Circle()
-                .fill(Color(hex: "#C8A86E"))
+                .fill(themeManager.accentSafeColor)
                 .frame(width: 40, height: 40)
                 .overlay(
                     Text(String(season.rawValue.prefix(2)))

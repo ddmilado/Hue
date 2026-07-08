@@ -4,6 +4,7 @@ struct ReviewRetakeView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showProcessing = false
     @State private var qualityFlags: [String] = []
+    @EnvironmentObject var themeManager: ThemeManager
 
     var body: some View {
         ZStack {
@@ -15,6 +16,7 @@ struct ReviewRetakeView: View {
                 Text("Review Your Photos")
                     .font(.custom("Fraunces", size: 28))
                     .foregroundColor(Color(hex: "#F7F2EC"))
+                    .accessibilityLabel("Review your photos")
 
                 ZStack {
                     RoundedRectangle(cornerRadius: 20)
@@ -59,6 +61,7 @@ struct ReviewRetakeView: View {
                             .background(Color(hex: "#2A2729"))
                             .cornerRadius(12)
                     }
+                    .accessibilityLabel("Retake photo")
 
                     Button(action: { showProcessing = true }) {
                         Text("Looks good")
@@ -67,9 +70,11 @@ struct ReviewRetakeView: View {
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
-                            .background(Color(hex: "#C8A86E"))
+                            .background(themeManager.accentSafeColor)
                             .cornerRadius(12)
                     }
+                    .pressable()
+                    .accessibilityLabel("Looks good, start analysis")
                 }
                 .padding(.horizontal, 24)
                 .padding(.bottom, 40)

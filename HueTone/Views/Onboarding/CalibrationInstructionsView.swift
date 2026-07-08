@@ -3,6 +3,7 @@ import SwiftUI
 struct CalibrationInstructionsView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showCapture = false
+    @EnvironmentObject var themeManager: ThemeManager
 
     var body: some View {
         ZStack {
@@ -13,7 +14,7 @@ struct CalibrationInstructionsView: View {
 
                 Image(systemName: "doc.viewfinder")
                     .font(.system(size: 72))
-                    .foregroundColor(Color(hex: "#C8A86E"))
+                    .foregroundColor(themeManager.accentSafeColor)
 
                 Text("Calibration Step")
                     .font(.custom("Fraunces", size: 28))
@@ -51,12 +52,21 @@ struct CalibrationInstructionsView: View {
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
-                        .background(Color(hex: "#C8A86E"))
+                        .background(themeManager.accentSafeColor)
                         .cornerRadius(12)
                 }
+                .pressable()
                 .padding(.horizontal, 24)
                 .padding(.bottom, 40)
             }
+        }
+        .overlay(alignment: .topLeading) {
+            Button(action: { dismiss() }) {
+                Image(systemName: "chevron.left")
+                    .foregroundColor(Color(hex: "#F7F2EC"))
+                    .padding()
+            }
+            .accessibilityLabel("Go back")
         }
         .fullScreenCover(isPresented: $showCapture) {
             LiveCaptureView()

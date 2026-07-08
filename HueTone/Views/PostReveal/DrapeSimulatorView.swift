@@ -14,6 +14,7 @@ struct DrapeSimulatorView: View {
                     .font(.custom("Fraunces", size: 28))
                     .foregroundColor(Color(hex: "#F7F2EC"))
                     .padding(.top, 8)
+                    .accessibilityLabel("Drape simulator")
 
                 Text("See how different colors work with your complexion")
                     .font(.custom("Inter", size: 14))
@@ -22,7 +23,7 @@ struct DrapeSimulatorView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 12) {
                         ForEach(categories, id: \.self) { cat in
-                            CategoryPill(category: cat, isSelected: true)
+                            CategoryPill(category: cat, isSelected: true, themeManager: themeManager)
                         }
                     }
                     .padding(.horizontal, 24)
@@ -56,6 +57,7 @@ struct DrapeSimulatorView: View {
 struct CategoryPill: View {
     let category: SwatchCategory
     var isSelected: Bool = false
+    let themeManager: ThemeManager
 
     var body: some View {
         Text(category.rawValue.capitalized)
@@ -63,7 +65,7 @@ struct CategoryPill: View {
             .foregroundColor(isSelected ? .white : Color(hex: "#8B8290"))
             .padding(.horizontal, 16)
             .padding(.vertical, 8)
-            .background(isSelected ? Color(hex: "#C8A86E") : Color(hex: "#2A2729"))
+            .background(isSelected ? themeManager.accentSafeColor : Color(hex: "#2A2729"))
             .cornerRadius(20)
     }
 }

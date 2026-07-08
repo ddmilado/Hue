@@ -3,6 +3,7 @@ import SwiftUI
 struct MultiShotCaptureView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showReview = false
+    @EnvironmentObject var themeManager: ThemeManager
 
     var body: some View {
         ZStack {
@@ -26,7 +27,7 @@ struct MultiShotCaptureView: View {
                         .aspectRatio(3/4, contentMode: .fit)
                         .overlay(
                             RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color(hex: "#C8A86E").opacity(0.5), lineWidth: 2)
+                                .stroke(themeManager.accentSafeColor.opacity(0.5), lineWidth: 2)
                         )
 
                     Image(systemName: "person.fill.viewfinder")
@@ -42,7 +43,7 @@ struct MultiShotCaptureView: View {
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
-                        .background(Color(hex: "#C8A86E"))
+                        .background(themeManager.accentSafeColor)
                         .cornerRadius(12)
                 }
                 .padding(.horizontal, 24)
