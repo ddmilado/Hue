@@ -1,0 +1,840 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = { };
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0010001 /* HueToneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010001 /* HueToneApp.swift */; };
+		B0010002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010002 /* ContentView.swift */; };
+		B0010003 /* NavigationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010003 /* NavigationState.swift */; };
+		B0010004 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010004 /* User.swift */; };
+		B0010005 /* PhotoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010005 /* PhotoSet.swift */; };
+		B0010006 /* ColorMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010006 /* ColorMetrics.swift */; };
+		B0010007 /* SeasonResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010007 /* SeasonResult.swift */; };
+		B0010008 /* PaletteSwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010008 /* PaletteSwatch.swift */; };
+		B0010009 /* GeneratedLook.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010009 /* GeneratedLook.swift */; };
+		B0010010 /* AffiliateProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010010 /* AffiliateProduct.swift */; };
+		B0010011 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010011 /* AppTheme.swift */; };
+		B0010012 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010012 /* ThemeManager.swift */; };
+		B0010013 /* DynamicAccent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010013 /* DynamicAccent.swift */; };
+		B0010014 /* ColorScience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010014 /* ColorScience.swift */; };
+		B0010015 /* CalibrationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010015 /* CalibrationEngine.swift */; };
+		B0010016 /* FaceLandmarkDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010016 /* FaceLandmarkDetection.swift */; };
+		B0010017 /* RegionSampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010017 /* RegionSampler.swift */; };
+		B0010018 /* FeatureExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010018 /* FeatureExtractor.swift */; };
+		B0010019 /* Taxonomy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010019 /* Taxonomy.swift */; };
+		B0010020 /* RuleBasedClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010020 /* RuleBasedClassifier.swift */; };
+		B0010021 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010021 /* CameraService.swift */; };
+		B0010022 /* AffiliateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010022 /* AffiliateService.swift */; };
+		B0010023 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010023 /* StorageService.swift */; };
+		B0010024 /* KaleidoscopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010024 /* KaleidoscopeView.swift */; };
+		B0010025 /* ColorFanReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010025 /* ColorFanReveal.swift */; };
+		B0010026 /* SwatchCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010026 /* SwatchCard.swift */; };
+		B0010027 /* LightingMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010027 /* LightingMeter.swift */; };
+		B0010028 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010028 /* WelcomeView.swift */; };
+		B0010029 /* HowItWorksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010029 /* HowItWorksView.swift */; };
+		B0010030 /* PermissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010030 /* PermissionView.swift */; };
+		B0010031 /* CapturePrepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010031 /* CapturePrepView.swift */; };
+		B0010032 /* CalibrationInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010032 /* CalibrationInstructionsView.swift */; };
+		B0010033 /* LiveCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010033 /* LiveCaptureView.swift */; };
+		B0010034 /* MultiShotCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010034 /* MultiShotCaptureView.swift */; };
+		B0010035 /* ReviewRetakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010035 /* ReviewRetakeView.swift */; };
+		B0010036 /* ProcessingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010036 /* ProcessingView.swift */; };
+		B0010037 /* TeaserRevealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010037 /* TeaserRevealView.swift */; };
+		B0010038 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010038 /* CreateAccountView.swift */; };
+		B0010039 /* Big5ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010039 /* Big5ResultsView.swift */; };
+		B0010040 /* SeasonRevealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010040 /* SeasonRevealView.swift */; };
+		B0010041 /* SeasonDeepDiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010041 /* SeasonDeepDiveView.swift */; };
+		B0010042 /* DrapeSimulatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010042 /* DrapeSimulatorView.swift */; };
+		B0010043 /* ColorWalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010043 /* ColorWalletView.swift */; };
+		B0010044 /* TryItOnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010044 /* TryItOnView.swift */; };
+		B0010045 /* PatternStudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010045 /* PatternStudioView.swift */; };
+		B0010046 /* ShopThisLookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010046 /* ShopThisLookView.swift */; };
+		B0010047 /* ShoppingModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010047 /* ShoppingModeView.swift */; };
+		B0010048 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010048 /* HistoryView.swift */; };
+		B0010049 /* UpgradePremiumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010049 /* UpgradePremiumView.swift */; };
+		B0010050 /* ProfileSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010050 /* ProfileSettingsView.swift */; };
+		B0010051 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0010051 /* Info.plist */; };
+		B0010052 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0010052 /* Assets.xcassets */; };
+		B0020001 /* HueToneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0020001 /* HueToneTests.swift */; };
+		B0030001 /* HueToneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0030001 /* HueToneUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0010001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = P0010001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = T0010001;
+			remoteInfo = HueTone;
+		};
+		C0010002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = P0010001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = T0010001;
+			remoteInfo = HueTone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F0010001 /* HueToneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueToneApp.swift; sourceTree = "<group>"; };
+		F0010002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F0010003 /* NavigationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationState.swift; sourceTree = "<group>"; };
+		F0010004 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F0010005 /* PhotoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSet.swift; sourceTree = "<group>"; };
+		F0010006 /* ColorMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMetrics.swift; sourceTree = "<group>"; };
+		F0010007 /* SeasonResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonResult.swift; sourceTree = "<group>"; };
+		F0010008 /* PaletteSwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteSwatch.swift; sourceTree = "<group>"; };
+		F0010009 /* GeneratedLook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedLook.swift; sourceTree = "<group>"; };
+		F0010010 /* AffiliateProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffiliateProduct.swift; sourceTree = "<group>"; };
+		F0010011 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		F0010012 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		F0010013 /* DynamicAccent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicAccent.swift; sourceTree = "<group>"; };
+		F0010014 /* ColorScience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScience.swift; sourceTree = "<group>"; };
+		F0010015 /* CalibrationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationEngine.swift; sourceTree = "<group>"; };
+		F0010016 /* FaceLandmarkDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmarkDetection.swift; sourceTree = "<group>"; };
+		F0010017 /* RegionSampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSampler.swift; sourceTree = "<group>"; };
+		F0010018 /* FeatureExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureExtractor.swift; sourceTree = "<group>"; };
+		F0010019 /* Taxonomy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Taxonomy.swift; sourceTree = "<group>"; };
+		F0010020 /* RuleBasedClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleBasedClassifier.swift; sourceTree = "<group>"; };
+		F0010021 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		F0010022 /* AffiliateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AffiliateService.swift; sourceTree = "<group>"; };
+		F0010023 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		F0010024 /* KaleidoscopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleidoscopeView.swift; sourceTree = "<group>"; };
+		F0010025 /* ColorFanReveal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFanReveal.swift; sourceTree = "<group>"; };
+		F0010026 /* SwatchCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwatchCard.swift; sourceTree = "<group>"; };
+		F0010027 /* LightingMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightingMeter.swift; sourceTree = "<group>"; };
+		F0010028 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		F0010029 /* HowItWorksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorksView.swift; sourceTree = "<group>"; };
+		F0010030 /* PermissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionView.swift; sourceTree = "<group>"; };
+		F0010031 /* CapturePrepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePrepView.swift; sourceTree = "<group>"; };
+		F0010032 /* CalibrationInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationInstructionsView.swift; sourceTree = "<group>"; };
+		F0010033 /* LiveCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCaptureView.swift; sourceTree = "<group>"; };
+		F0010034 /* MultiShotCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiShotCaptureView.swift; sourceTree = "<group>"; };
+		F0010035 /* ReviewRetakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRetakeView.swift; sourceTree = "<group>"; };
+		F0010036 /* ProcessingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessingView.swift; sourceTree = "<group>"; };
+		F0010037 /* TeaserRevealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeaserRevealView.swift; sourceTree = "<group>"; };
+		F0010038 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		F0010039 /* Big5ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Big5ResultsView.swift; sourceTree = "<group>"; };
+		F0010040 /* SeasonRevealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonRevealView.swift; sourceTree = "<group>"; };
+		F0010041 /* SeasonDeepDiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonDeepDiveView.swift; sourceTree = "<group>"; };
+		F0010042 /* DrapeSimulatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrapeSimulatorView.swift; sourceTree = "<group>"; };
+		F0010043 /* ColorWalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorWalletView.swift; sourceTree = "<group>"; };
+		F0010044 /* TryItOnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryItOnView.swift; sourceTree = "<group>"; };
+		F0010045 /* PatternStudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternStudioView.swift; sourceTree = "<group>"; };
+		F0010046 /* ShopThisLookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopThisLookView.swift; sourceTree = "<group>"; };
+		F0010047 /* ShoppingModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingModeView.swift; sourceTree = "<group>"; };
+		F0010048 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		F0010049 /* UpgradePremiumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradePremiumView.swift; sourceTree = "<group>"; };
+		F0010050 /* ProfileSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsView.swift; sourceTree = "<group>"; };
+		F0010051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0010052 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0010100 /* HueTone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HueTone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0020001 /* HueToneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueToneTests.swift; sourceTree = "<group>"; };
+		F0020002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0020100 /* HueToneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HueToneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0030001 /* HueToneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HueToneUITests.swift; sourceTree = "<group>"; };
+		F0030002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0030100 /* HueToneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HueToneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		K0010001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ( );
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		K0010002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ( );
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		K0010003 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = ( );
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G0010001 = {
+			isa = PBXGroup;
+			children = (
+				G0010002 /* HueTone */,
+				G0010003 /* HueToneTests */,
+				G0010004 /* HueToneUITests */,
+				G0010005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G0010002 /* HueTone */ = {
+			isa = PBXGroup;
+			children = (
+				G0010006 /* App */,
+				G0010007 /* Models */,
+				G0010008 /* Theme */,
+				G0010009 /* Pipeline */,
+				G0010010 /* Services */,
+				G0010011 /* Views */,
+				G0010012 /* Resources */,
+			);
+			path = HueTone;
+			sourceTree = "<group>";
+		};
+		G0010003 /* HueToneTests */ = {
+			isa = PBXGroup;
+			children = (
+				F0020001 /* HueToneTests.swift */,
+				F0020002 /* Info.plist */,
+			);
+			path = HueToneTests;
+			sourceTree = "<group>";
+		};
+		G0010004 /* HueToneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F0030001 /* HueToneUITests.swift */,
+				F0030002 /* Info.plist */,
+			);
+			path = HueToneUITests;
+			sourceTree = "<group>";
+		};
+		G0010005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0010100 /* HueTone.app */,
+				F0020100 /* HueToneTests.xctest */,
+				F0030100 /* HueToneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G0010006 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F0010001 /* HueToneApp.swift */,
+				F0010002 /* ContentView.swift */,
+				F0010003 /* NavigationState.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		G0010007 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0010004 /* User.swift */,
+				F0010005 /* PhotoSet.swift */,
+				F0010006 /* ColorMetrics.swift */,
+				F0010007 /* SeasonResult.swift */,
+				F0010008 /* PaletteSwatch.swift */,
+				F0010009 /* GeneratedLook.swift */,
+				F0010010 /* AffiliateProduct.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		G0010008 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				F0010011 /* AppTheme.swift */,
+				F0010012 /* ThemeManager.swift */,
+				F0010013 /* DynamicAccent.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		G0010009 /* Pipeline */ = {
+			isa = PBXGroup;
+			children = (
+				F0010014 /* ColorScience.swift */,
+				F0010015 /* CalibrationEngine.swift */,
+				F0010016 /* FaceLandmarkDetection.swift */,
+				F0010017 /* RegionSampler.swift */,
+				F0010018 /* FeatureExtractor.swift */,
+				G0010013 /* Classifier */,
+			);
+			path = Pipeline;
+			sourceTree = "<group>";
+		};
+		G0010010 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F0010021 /* CameraService.swift */,
+				F0010022 /* AffiliateService.swift */,
+				F0010023 /* StorageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		G0010011 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				G0010014 /* Components */,
+				G0010015 /* Onboarding */,
+				G0010016 /* Capture */,
+				G0010017 /* Analysis */,
+				G0010018 /* PostReveal */,
+				G0010019 /* Account */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		G0010012 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F0010051 /* Info.plist */,
+				F0010052 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		G0010013 /* Classifier */ = {
+			isa = PBXGroup;
+			children = (
+				F0010019 /* Taxonomy.swift */,
+				F0010020 /* RuleBasedClassifier.swift */,
+			);
+			path = Classifier;
+			sourceTree = "<group>";
+		};
+		G0010014 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F0010024 /* KaleidoscopeView.swift */,
+				F0010025 /* ColorFanReveal.swift */,
+				F0010026 /* SwatchCard.swift */,
+				F0010027 /* LightingMeter.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		G0010015 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				F0010028 /* WelcomeView.swift */,
+				F0010029 /* HowItWorksView.swift */,
+				F0010030 /* PermissionView.swift */,
+				F0010031 /* CapturePrepView.swift */,
+				F0010032 /* CalibrationInstructionsView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		G0010016 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				F0010033 /* LiveCaptureView.swift */,
+				F0010034 /* MultiShotCaptureView.swift */,
+				F0010035 /* ReviewRetakeView.swift */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		G0010017 /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				F0010036 /* ProcessingView.swift */,
+				F0010037 /* TeaserRevealView.swift */,
+				F0010038 /* CreateAccountView.swift */,
+				F0010039 /* Big5ResultsView.swift */,
+				F0010040 /* SeasonRevealView.swift */,
+			);
+			path = Analysis;
+			sourceTree = "<group>";
+		};
+		G0010018 /* PostReveal */ = {
+			isa = PBXGroup;
+			children = (
+				F0010041 /* SeasonDeepDiveView.swift */,
+				F0010042 /* DrapeSimulatorView.swift */,
+				F0010043 /* ColorWalletView.swift */,
+				F0010044 /* TryItOnView.swift */,
+				F0010045 /* PatternStudioView.swift */,
+				F0010046 /* ShopThisLookView.swift */,
+				F0010047 /* ShoppingModeView.swift */,
+			);
+			path = PostReveal;
+			sourceTree = "<group>";
+		};
+		G0010019 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				F0010048 /* HistoryView.swift */,
+				F0010049 /* UpgradePremiumView.swift */,
+				F0010050 /* ProfileSettingsView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		T0010001 /* HueTone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = L0010002 /* Build configuration list for PBXNativeTarget "HueTone" */;
+			buildPhases = (
+				S0010001 /* Sources */,
+				K0010001 /* Frameworks */,
+				R0010001 /* Resources */,
+			);
+			buildRules = ( );
+			dependencies = ( );
+			name = HueTone;
+			productName = HueTone;
+			productReference = F0010100 /* HueTone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		T0010002 /* HueToneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = L0010003 /* Build configuration list for PBXNativeTarget "HueToneTests" */;
+			buildPhases = (
+				S0010002 /* Sources */,
+				K0010002 /* Frameworks */,
+				R0010002 /* Resources */,
+			);
+			buildRules = ( );
+			dependencies = (
+				D0010001 /* PBXTargetDependency */,
+			);
+			name = HueToneTests;
+			productName = HueToneTests;
+			productReference = F0020100 /* HueToneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		T0010003 /* HueToneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = L0010004 /* Build configuration list for PBXNativeTarget "HueToneUITests" */;
+			buildPhases = (
+				S0010003 /* Sources */,
+				K0010003 /* Frameworks */,
+				R0010003 /* Resources */,
+			);
+			buildRules = ( );
+			dependencies = (
+				D0010002 /* PBXTargetDependency */,
+			);
+			name = HueToneUITests;
+			productName = HueToneUITests;
+			productReference = F0030100 /* HueToneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		P0010001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					T0010001 = { CreatedOnToolsVersion = 15.0; };
+					T0010002 = { CreatedOnToolsVersion = 15.0; TestTargetID = T0010001; };
+					T0010003 = { CreatedOnToolsVersion = 15.0; TestTargetID = T0010001; };
+				};
+			};
+			buildConfigurationList = L0010001 /* Build configuration list for PBXProject "HueTone" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = ( en, Base, );
+			mainGroup = G0010001;
+			productRefGroup = G0010005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				T0010001 /* HueTone */,
+				T0010002 /* HueToneTests */,
+				T0010003 /* HueToneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		R0010001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0010051 /* Info.plist in Resources */,
+				B0010052 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		R0010002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ( );
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		R0010003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = ( );
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		S0010001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0010001 /* HueToneApp.swift in Sources */,
+				B0010002 /* ContentView.swift in Sources */,
+				B0010003 /* NavigationState.swift in Sources */,
+				B0010004 /* User.swift in Sources */,
+				B0010005 /* PhotoSet.swift in Sources */,
+				B0010006 /* ColorMetrics.swift in Sources */,
+				B0010007 /* SeasonResult.swift in Sources */,
+				B0010008 /* PaletteSwatch.swift in Sources */,
+				B0010009 /* GeneratedLook.swift in Sources */,
+				B0010010 /* AffiliateProduct.swift in Sources */,
+				B0010011 /* AppTheme.swift in Sources */,
+				B0010012 /* ThemeManager.swift in Sources */,
+				B0010013 /* DynamicAccent.swift in Sources */,
+				B0010014 /* ColorScience.swift in Sources */,
+				B0010015 /* CalibrationEngine.swift in Sources */,
+				B0010016 /* FaceLandmarkDetection.swift in Sources */,
+				B0010017 /* RegionSampler.swift in Sources */,
+				B0010018 /* FeatureExtractor.swift in Sources */,
+				B0010019 /* Taxonomy.swift in Sources */,
+				B0010020 /* RuleBasedClassifier.swift in Sources */,
+				B0010021 /* CameraService.swift in Sources */,
+				B0010022 /* AffiliateService.swift in Sources */,
+				B0010023 /* StorageService.swift in Sources */,
+				B0010024 /* KaleidoscopeView.swift in Sources */,
+				B0010025 /* ColorFanReveal.swift in Sources */,
+				B0010026 /* SwatchCard.swift in Sources */,
+				B0010027 /* LightingMeter.swift in Sources */,
+				B0010028 /* WelcomeView.swift in Sources */,
+				B0010029 /* HowItWorksView.swift in Sources */,
+				B0010030 /* PermissionView.swift in Sources */,
+				B0010031 /* CapturePrepView.swift in Sources */,
+				B0010032 /* CalibrationInstructionsView.swift in Sources */,
+				B0010033 /* LiveCaptureView.swift in Sources */,
+				B0010034 /* MultiShotCaptureView.swift in Sources */,
+				B0010035 /* ReviewRetakeView.swift in Sources */,
+				B0010036 /* ProcessingView.swift in Sources */,
+				B0010037 /* TeaserRevealView.swift in Sources */,
+				B0010038 /* CreateAccountView.swift in Sources */,
+				B0010039 /* Big5ResultsView.swift in Sources */,
+				B0010040 /* SeasonRevealView.swift in Sources */,
+				B0010041 /* SeasonDeepDiveView.swift in Sources */,
+				B0010042 /* DrapeSimulatorView.swift in Sources */,
+				B0010043 /* ColorWalletView.swift in Sources */,
+				B0010044 /* TryItOnView.swift in Sources */,
+				B0010045 /* PatternStudioView.swift in Sources */,
+				B0010046 /* ShopThisLookView.swift in Sources */,
+				B0010047 /* ShoppingModeView.swift in Sources */,
+				B0010048 /* HistoryView.swift in Sources */,
+				B0010049 /* UpgradePremiumView.swift in Sources */,
+				B0010050 /* ProfileSettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S0010002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0020001 /* HueToneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		S0010003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0030001 /* HueToneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0010001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = T0010001 /* HueTone */;
+			targetProxy = C0010001 /* PBXContainerItemProxy */;
+		};
+		D0010002 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = T0010001 /* HueTone */;
+			targetProxy = C0010002 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		N0010001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ( "DEBUG=1", "$(inherited)", );
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		N0010002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		N0010003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HueTone/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/Frameworks", );
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huetone.app;
+				PRODUCT_NAME = HueTone;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		N0010004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HueTone/Resources/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait";
+				LD_RUNPATH_SEARCH_PATHS = ( "$(inherited)", "@executable_path/Frameworks", );
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huetone.app;
+				PRODUCT_NAME = HueTone;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		N0010005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huetone.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HueTone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HueTone";
+			};
+			name = Debug;
+		};
+		N0010006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huetone.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HueTone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HueTone";
+			};
+			name = Release;
+		};
+		N0010007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huetone.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HueTone;
+			};
+			name = Debug;
+		};
+		N0010008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huetone.uitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HueTone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		L0010001 /* Build configuration list for PBXProject "HueTone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = ( N0010001 /* Debug */, N0010002 /* Release */, );
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		L0010002 /* Build configuration list for PBXNativeTarget "HueTone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = ( N0010003 /* Debug */, N0010004 /* Release */, );
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		L0010003 /* Build configuration list for PBXNativeTarget "HueToneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = ( N0010005 /* Debug */, N0010006 /* Release */, );
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		L0010004 /* Build configuration list for PBXNativeTarget "HueToneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = ( N0010007 /* Debug */, N0010008 /* Release */, );
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = P0010001 /* Project object */;
+}
