@@ -25,6 +25,7 @@
 		B0010059 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010107 /* AuthService.swift */; };
 		B0010060 /* SupabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010108 /* SupabaseService.swift */; };
 		B0010061 /* SyncService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010109 /* SyncService.swift */; };
+		B0010062 /* GenerationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010110 /* GenerationService.swift */; };
 		B0010014 /* ColorScience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010014 /* ColorScience.swift */; };
 		B0010015 /* CalibrationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010015 /* CalibrationEngine.swift */; };
 		B0010016 /* FaceLandmarkDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0010016 /* FaceLandmarkDetection.swift */; };
@@ -107,6 +108,7 @@
 		F0010107 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F0010108 /* SupabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseService.swift; sourceTree = "<group>"; };
 		F0010109 /* SyncService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncService.swift; sourceTree = "<group>"; };
+		F0010110 /* GenerationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerationService.swift; sourceTree = "<group>"; };
 		F0010014 /* ColorScience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorScience.swift; sourceTree = "<group>"; };
 		F0010015 /* CalibrationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationEngine.swift; sourceTree = "<group>"; };
 		F0010016 /* FaceLandmarkDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLandmarkDetection.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 				F0010107 /* AuthService.swift */,
 				F0010108 /* SupabaseService.swift */,
 				F0010109 /* SyncService.swift */,
+				F0010110 /* GenerationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 				B0010059 /* AuthService.swift in Sources */,
 				B0010060 /* SupabaseService.swift in Sources */,
 				B0010061 /* SyncService.swift in Sources */,
+				B0010062 /* GenerationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

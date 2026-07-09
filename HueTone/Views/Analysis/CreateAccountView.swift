@@ -54,14 +54,31 @@ struct CreateAccountView: View {
 
     private var signInOptions: some View {
         VStack(spacing: 16) {
+            Button(action: {
+                authService.continueAsGuest()
+                completeSignIn()
+            }) {
+                Text("Continue without account")
+                    .font(.custom("Inter", size: 17, relativeTo: .body))
+                    .fontWeight(.semibold)
+                    .foregroundColor(Color(hex: "#8B8290"))
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 14)
+                    .background(Color(hex: "#2A2729"))
+                    .cornerRadius(12)
+            }
+            .pressable()
+            .accessibilityLabel("Continue without account")
+
             SignInWithAppleButton(
                 onRequest: { request in
                     request.requestedScopes = [.fullName, .email]
                 },
                 onCompletion: { result in
-                    authService.handleAppleSignIn(result: result)
-                    if authService.isAuthenticated {
-                        completeSignIn()
+                    authService.handleAppleSignIn(result: result) { success in
+                        if success {
+                            completeSignIn()
+                        }
                     }
                 }
             )

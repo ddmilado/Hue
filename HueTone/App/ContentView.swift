@@ -35,9 +35,9 @@ struct MainTabView: View {
                     Label("Wallet", systemImage: "wallet.pass")
                 }
 
-            ShoppingModeView()
+            TryItOnView()
                 .tabItem {
-                    Label("Shop", systemImage: "camera.viewfinder")
+                    Label("Try On", systemImage: "sparkles.rectangle.stack")
                 }
 
             HistoryView()

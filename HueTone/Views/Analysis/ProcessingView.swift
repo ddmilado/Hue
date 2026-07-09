@@ -115,6 +115,7 @@ struct ProcessingView: View {
         let result = classifier.classify(features: features)
 
         navigationState.latestResult = result
+        navigationState.saveCurrentResultToHistory()
 
         var index = 0
         Timer.scheduledTimer(withTimeInterval: 0.7, repeats: true) { timer in

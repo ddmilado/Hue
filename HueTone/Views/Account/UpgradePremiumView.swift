@@ -145,7 +145,8 @@ struct UpgradePremiumView: View {
     }
 
     private func validateReceipt(transaction: StoreKit.Transaction) async {
-        guard let receiptData = receiptDataString,
+        guard Config.isSupabaseConfigured,
+              let receiptData = receiptDataString,
               authService.isAuthenticated else { return }
 
         let url = Config.supabaseURL.appendingPathComponent("/functions/v1/validate-receipt")

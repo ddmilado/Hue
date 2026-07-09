@@ -3,7 +3,9 @@ import SwiftUI
 struct CalibrationInstructionsView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showCapture = false
+    @State private var showProcessing = false
     @EnvironmentObject var themeManager: ThemeManager
+    @EnvironmentObject var navigationState: NavigationState
 
     var body: some View {
         ZStack {
@@ -57,7 +59,18 @@ struct CalibrationInstructionsView: View {
                 }
                 .pressable()
                 .padding(.horizontal, 24)
+
+                #if targetEnvironment(simulator)
+                Button(action: { showProcessing = true }) {
+                    Text("Use demo image")
+                        .font(.custom("Inter", size: 15))
+                        .foregroundColor(Color(hex: "#8B8290"))
+                        .padding(.vertical, 10)
+                }
                 .padding(.bottom, 40)
+                #else
+                .padding(.bottom, 40)
+                #endif
             }
         }
         .overlay(alignment: .topLeading) {
@@ -70,6 +83,9 @@ struct CalibrationInstructionsView: View {
         }
         .fullScreenCover(isPresented: $showCapture) {
             LiveCaptureView()
+        }
+        .fullScreenCover(isPresented: $showProcessing) {
+            ProcessingView()
         }
     }
 }

@@ -17,23 +17,27 @@ final class AuthService: ObservableObject {
         isAuthenticated = currentUser != nil
     }
 
-    func handleAppleSignIn(result: Result<ASAuthorization, Error>) {
+    func handleAppleSignIn(result: Result<ASAuthorization, Error>, completion: ((Bool) -> Void)? = nil) {
         switch result {
         case .success(let authorization):
             guard let credential = authorization.credential as? ASAuthorizationAppleIDCredential,
                   let idToken = credential.identityToken.flatMap({ String(data: $0, encoding: .utf8) }) else {
+                completion?(false)
                 return
             }
             Task {
                 do {
                     let user = try await supabase.signInWithApple(idToken: idToken, rawNonce: nil)
                     updateState(with: user)
+                    await MainActor.run { completion?(true) }
                 } catch {
                     print("Apple sign-in failed: \(error)")
+                    await MainActor.run { completion?(false) }
                 }
             }
         case .failure(let error):
             print("Apple sign-in cancelled: \(error)")
+            completion?(false)
         }
     }
 
@@ -71,6 +75,12 @@ final class AuthService: ObservableObject {
 
     var isPremium: Bool {
         subscriptionTier == "premium"
+    }
+
+    func continueAsGuest() {
+        currentUser = AuthUser(id: UUID(), email: nil)
+        isAuthenticated = true
+        subscriptionTier = "free"
     }
 
     private func updateState(with user: AuthUser) {
